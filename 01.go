@@ -23,7 +23,9 @@ func nlp00(s string) string {
 
 // 01. 「パタトクカシーー」
 func nlp01(s string) string {
-	rs := []rune(s)
-
+	var rs = ""
+	for i := 0; i < 8; i = i + 2 {
+		rs += string([]rune(s)[i : i+1])
+	}
 	return string(rs)
 }
